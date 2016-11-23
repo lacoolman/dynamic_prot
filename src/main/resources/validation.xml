@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<oval
+        xmlns="http://oval.sf.net/oval-configuration"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://oval.sf.net/oval-configuration http://oval.sourceforge.net/oval-configuration.xsd"
+>
+    <class type="com.dynamic.Model" overwrite="false" applyFieldConstraintsToSetter="true">
+        <field name="field1">
+            <notNull/>
+            <length min="1" max="3" />
+        </field>
+        <field name="field3">
+            <notNull/>
+            <length min="3" max="5" />
+        </field>
+        <field name="field2">
+            <notNull/>
+            <com.dynamic.BigDecimalConstraint scale="1" precision="2"/>
+        </field>
+    </class>
+</oval>
